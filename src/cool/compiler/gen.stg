@@ -1,0 +1,34 @@
+
+
+
+program(data, textFuncs, textMain) ::= <<
+.data
+<data>
+
+.text
+<textFuncs>
+
+main:
+<textMain>
+	li $v0, 10
+	syscall		#exit
+>>
+
+
+
+class_tag(tag_name, value)::= <<
+<tag_name>:
+    .word <value>
+>>
+
+class_protObj(tag,size,dispatchPtr,attributes)::= <<
+.word <tag>
+.word <size>
+.word <dispatchPtr>
+<attributes>
+>>
+
+class_dispTab()::= <<
+
+>>
+
